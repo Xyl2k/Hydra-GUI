@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form Form1 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "THC Hydra GUI v0.1 - Xyl2k (White Hat Edition)"
+   Caption         =   "THC Hydra GUI v0.2 - Xyl2k (White Hat Edition)"
    ClientHeight    =   8565
    ClientLeft      =   45
    ClientTop       =   390
