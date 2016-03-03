@@ -1,6 +1,5 @@
 Type=Exe
 Form=Hydra.frm
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
 IconForm="Form1"
 Startup="Form1"
 ExeName32="HydraGUI.exe"

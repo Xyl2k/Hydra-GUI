@@ -2,16 +2,33 @@ VERSION 5.00
 Begin VB.Form Form1 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "THC Hydra GUI v0.1 - Xyl2k (White Hat Edition)"
-   ClientHeight    =   8460
+   ClientHeight    =   8565
    ClientLeft      =   45
    ClientTop       =   390
    ClientWidth     =   8415
    Icon            =   "Hydra.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   ScaleHeight     =   8460
+   ScaleHeight     =   8565
    ScaleWidth      =   8415
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Copy2clipboard 
+      Caption         =   "C"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   76
+      Top             =   8160
+      Width           =   255
+   End
+   Begin VB.TextBox Text16 
+      Alignment       =   2  'Center
+      Height          =   285
+      Left            =   480
+      Locked          =   -1  'True
+      TabIndex        =   75
+      Top             =   8160
+      Width           =   6495
+   End
    Begin VB.Frame Frame3 
       Caption         =   "Load several passwords from FILE"
       Height          =   2055
@@ -457,7 +474,7 @@ Begin VB.Form Form1
          Height          =   315
          ItemData        =   "Hydra.frx":1B725
          Left            =   120
-         List            =   "Hydra.frx":1B750
+         List            =   "Hydra.frx":1B771
          Style           =   2  'Dropdown List
          TabIndex        =   45
          Top             =   2880
@@ -480,9 +497,9 @@ Begin VB.Form Form1
       End
       Begin VB.ComboBox Combo2 
          Height          =   315
-         ItemData        =   "Hydra.frx":1B84B
+         ItemData        =   "Hydra.frx":1B8FD
          Left            =   840
-         List            =   "Hydra.frx":1B855
+         List            =   "Hydra.frx":1B907
          Style           =   2  'Dropdown List
          TabIndex        =   21
          Top             =   1440
@@ -522,28 +539,28 @@ Begin VB.Form Form1
       Begin VB.Image Image5 
          Height          =   240
          Left            =   7800
-         Picture         =   "Hydra.frx":1B864
+         Picture         =   "Hydra.frx":1B916
          Top             =   1800
          Width           =   240
       End
       Begin VB.Image Image3 
          Height          =   240
          Left            =   7800
-         Picture         =   "Hydra.frx":1C266
+         Picture         =   "Hydra.frx":1C318
          Top             =   1080
          Width           =   240
       End
       Begin VB.Image Image2 
          Height          =   240
          Left            =   7800
-         Picture         =   "Hydra.frx":1CC68
+         Picture         =   "Hydra.frx":1CD1A
          Top             =   720
          Width           =   240
       End
       Begin VB.Image Image1 
          Height          =   240
          Left            =   7800
-         Picture         =   "Hydra.frx":1D66A
+         Picture         =   "Hydra.frx":1D71C
          Top             =   360
          Width           =   240
       End
@@ -684,9 +701,9 @@ Begin VB.Form Form1
       End
       Begin VB.ComboBox Combo1 
          Height          =   315
-         ItemData        =   "Hydra.frx":1E06C
+         ItemData        =   "Hydra.frx":1E11E
          Left            =   120
-         List            =   "Hydra.frx":1E085
+         List            =   "Hydra.frx":1E137
          Style           =   2  'Dropdown List
          TabIndex        =   1
          Top             =   360
@@ -722,16 +739,16 @@ Begin VB.Form Form1
    Begin VB.Image Image6 
       Height          =   225
       Left            =   7080
-      Picture         =   "Hydra.frx":1E18F
-      Top             =   8160
+      Picture         =   "Hydra.frx":1E241
+      Top             =   8280
       Visible         =   0   'False
       Width           =   1200
    End
    Begin VB.Image Image4 
       Height          =   225
       Left            =   7080
-      Picture         =   "Hydra.frx":1E7B7
-      Top             =   8160
+      Picture         =   "Hydra.frx":1E869
+      Top             =   8280
       Width           =   1200
    End
    Begin VB.Label Label12 
@@ -764,7 +781,7 @@ End Sub
 
 Private Sub Combo3_Click()
         Select Case (Combo3.Text)
-            Case "Citadel/Zeus/IceIX"
+            Case "Citadel/Zeus/IceIX/ZeusVM"
                 Text9.Text = "/cp.php?m=login" 'page
                 Text8.Text = "user=^USER^&pass=^PASS^" 'request
                 Text10.Text = "Bad user name or password." 'primary response
@@ -829,6 +846,61 @@ Case "CCGRAB Panel V.1.0"
                 Text8.Text = "password=^PASS^" 'request
                 Text10.Text = "Login" 'primary response
                 Combo2.ListIndex = 1
+Case "WSO Shell"
+                Text9.Text = "/fix.php" 'page
+                Text8.Text = "pass=^PASS^" 'request
+                Text10.Text = ">>" 'primary response
+                Combo2.ListIndex = 0
+Case "VertexNet Loader"
+                Text9.Text = "/Web%20Panel/index.php" 'page
+                Text8.Text = "login=^USER^&pwd=^PASS^" 'request
+                Text10.Text = "Wrong password" 'primary response
+                Combo2.ListIndex = 0
+Case "29A Loader"
+                Text9.Text = "/29A/" 'page
+                Text8.Text = "pass=^PASS^" 'request
+                Text10.Text = "Password invalid!" 'primary response
+                Combo2.ListIndex = 0
+Case "iBanking"
+                Text9.Text = "/android/admin.php" 'page
+                Text8.Text = "user=^USER^&pass=^PASS^" 'request
+                Text10.Text = "Attention! In your browser must be included COOKIES!!!" 'primary response
+                Combo2.ListIndex = 0
+Case "Tinba"
+                Text9.Text = "/wnd/main.php" 'page
+                Text8.Text = "user=^USER^&pass=^PASS^" 'request
+                Text10.Text = "Login" 'primary response
+                Combo2.ListIndex = 0
+Case "Kovter"
+                Text9.Text = "/10/login.php" 'page
+                Text8.Text = "login=^USER^&pass=^PASS^" 'request
+                Text10.Text = "Password:" 'primary response
+                Combo2.ListIndex = 0
+Case "Solar"
+                Text9.Text = "/solar/index.php?login" 'page
+                Text8.Text = "username=^USER^&password=^PASS^" 'request
+                Text10.Text = "loginbox" 'primary response
+                Combo2.ListIndex = 0
+Case "Gorynych/DiamondFox v4.2.0.380"
+                Text9.Text = "/html/index.php" 'page
+                Text8.Text = "user=^USER^&pass=^PASS^&login=" 'request
+                Text10.Text = "password" 'primary response
+                Combo2.ListIndex = 0
+Case "Kraken HTTP"
+                Text9.Text = "/panel/login.php" 'page
+                Text8.Text = "login=^USER^&pass=^PASS^&Connection=Connection" 'request
+                Text10.Text = "Sign In" 'primary response
+                Combo2.ListIndex = 0
+Case "H1N1 Loader"
+                Text9.Text = "/admin.php?do=auth" 'page
+                Text8.Text = "login=^USER^&pass=^PASS^" 'request
+                Text10.Text = "password" 'primary response
+                Combo2.ListIndex = 0
+Case "Alina"
+                Text9.Text = "/admin.php" 'page
+                Text8.Text = "p=^PASS^" 'request
+                Text10.Text = "password" 'primary response
+                Combo2.ListIndex = 0
         End Select
 End Sub
 
@@ -841,6 +913,15 @@ Private Sub Combo4_Click()
                 Label20.Caption = "http-head" 'page
                 Combo2.ListIndex = 0
         End Select
+End Sub
+
+Private Sub Copy2clipboard_Click()
+If Text16.Text = "" Then
+MsgBox "Nothing to copy, generate the request by clicking Hydra the fucker !", vbInformation, "Copy to clipboard"
+Else
+Clipboard.Clear
+Clipboard.SetText Text16.Text
+End If
 End Sub
 
 Private Sub Command4_Click() 'ftp auth
@@ -943,6 +1024,7 @@ Exit Sub
 Else
 Text2.Text = Text2.Text & Text15.Text & " ftp"
 sfinal = "cmd.exe /K " & Text2.Text
+Text16.Text = Text2.Text
 Shell sfinal, vbNormalFocus
 End If
 End Sub
@@ -1067,6 +1149,7 @@ strSubstr = Mid$(Text13, 1, 1) 'Page
 If strSubstr = "/" Then
 Text2.Text = Text2.Text & Text13.Text
 sfinal = "cmd.exe /K " & Text2.Text
+Text16.Text = Text2.Text
 Shell sfinal, vbNormalFocus
 Else
 MsgBox "The folder should start with a slash '/'" & vbCrLf & "e.g:" & vbCrLf & "/ " & vbCrLf & "/admin/", vbOKOnly + vbExclamation + vbApplicationModal, "Folder"
@@ -1174,6 +1257,7 @@ Exit Sub
 Else
 Text2.Text = Text2.Text & Text3.Text & " rdp"
 sfinal = "cmd.exe /K " & Text2.Text
+Text16.Text = Text2.Text
 Shell sfinal, vbNormalFocus
 End If
 End Sub
@@ -1354,6 +1438,7 @@ Select Case Retour
   Case vbYes
     Text2.Text = Text2.Text & Text10.Text & Chr(34)
     sfinal = "cmd.exe /K " & Text2.Text
+    Text16.Text = Text2.Text
 Shell sfinal, vbNormalFocus
   Case vbNo
 Exit Sub
@@ -1361,6 +1446,7 @@ End Select
 Else
 Text2.Text = Text2.Text & Text10.Text & Chr(34)
 sfinal = "cmd.exe /K " & Text2.Text
+Text16.Text = Text2.Text
 Shell sfinal, vbNormalFocus
 End If
 End Sub
