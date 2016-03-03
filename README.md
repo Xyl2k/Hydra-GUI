@@ -12,7 +12,7 @@ Hydra-GUI *White Hat Edition*
 Wasn't mean to be public at first but i'm releasing this code since i've switched to Patator made my new GUI and don't use anymore Hydra.
 
 ### Botnets pre-made forms:
-(version 0.1)
+(version 0.2)
 - Citadel/Zeus/IceIX/KINS
 - Pony 1.9
 - Sakura exploit kit
@@ -26,6 +26,20 @@ Wasn't mean to be public at first but i'm releasing this code since i've switche
 - Nuclear exploit pack
 - Multi Locker 3
 - CCGRAB Panel V.1.0
+- WSO Shell
+- VertexNet Loader
+- 29A Loader
+- iBanking
+- Tinba
+- Kovter
+- Solar
+- Gorynych/DiamondFox v4.2.0.380
+- Kraken HTTP
+- H1N1 Loader
+- Alina
+
+### Where can i download Hydra ?
+A compiled version can be found [here](https://github.com/maaaaz/thc-hydra-windows) otherwise just compile it from source with cygwin, may only the challenge guide you ;)
 
 ### Contact
 [xylitol☆temari.fr](mailto:xylitol☆temari.fr) - [xylitol☆malwareint.com](mailto:xylitol☆malwareint.com)
